@@ -2,3 +2,15 @@ $color1: #80bd9e;
 $color2: #89da59;
 $color3: #f98866;
 $color4: #ff420e;
+
+$bgColor:(
+    1:$color1,
+    2:$color2,
+    3:$color3,
+    4:$color4,
+);
+@each $fondo, $color in $bgColor{
+    .bg-#{$fondo}{
+        background-color: $color;
+    }
+}
